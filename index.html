@@ -524,6 +524,44 @@ body.menu-open{overflow:hidden}
   .nav-emergency-between{display:none!important}
 }
 
+
+/* V18 — visually centred, obvious Emergency Call Out */
+@media(min-width:1200px){
+  .nav{position:relative}
+  .nav-emergency-between{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+    z-index:4;
+    padding:11px 18px;
+    border-radius:999px;
+    font-size:10px!important;
+    letter-spacing:.09em;
+    font-weight:950!important;
+    background:linear-gradient(135deg,#a90f16,#e21e27)!important;
+    border:1px solid rgba(255,255,255,.22);
+    box-shadow:0 10px 26px rgba(212,23,31,.32),inset 0 1px rgba(255,255,255,.14);
+  }
+  .nav-emergency-between span{
+    font-size:13px;
+    color:#ffd43b;
+  }
+  .nav-emergency-between:hover{
+    transform:translate(-50%,-53%);
+    box-shadow:0 14px 32px rgba(212,23,31,.38),inset 0 1px rgba(255,255,255,.18);
+  }
+}
+@media(min-width:901px) and (max-width:1199px){
+  .nav-emergency-between{
+    margin-left:8px;
+    padding:9px 12px;
+    font-size:8px!important;
+    letter-spacing:.06em;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -533,7 +571,7 @@ body.menu-open{overflow:hidden}
       <span class="bolt">ϟ</span>
       <span class="brandcopy"><b>DERNANCOURT</b><span>ELECTRICAL</span><small>LOCAL · RELIABLE · PROFESSIONAL</small></span>
     </a>
-    <a class="nav-emergency nav-emergency-between" href="#emergency"><span>⚡</span> Emergency</a>
+    <a class="nav-emergency nav-emergency-between" href="#emergency"><span>⚡</span> Emergency Call Out</a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="#services">Services</a><a href="#about">About</a><a href="#projects">How It Works</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a>
     </nav>
