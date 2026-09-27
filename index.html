@@ -602,6 +602,34 @@ body.menu-open{overflow:hidden}
   }
 }
 
+
+/* V20 — force compact header on touch devices / iPhone Safari desktop-like viewport */
+@media (max-width:1100px), (hover:none) and (pointer:coarse){
+  .desktop-nav{display:none!important}
+  .nav-emergency-between{display:none!important}
+  .nav-actions{margin-left:auto!important;display:flex!important;align-items:center!important;gap:8px!important}
+  .mobile-emergency-header{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .mobile-nav{display:block!important}
+  .mobile-nav .menu-btn{display:grid!important}
+  .call-square{display:none!important}
+  .nav{gap:10px!important}
+  .brand{min-width:0!important}
+}
+@media (max-width:560px), (hover:none) and (pointer:coarse){
+  .header{height:76px}
+  .brandcopy b{font-size:12px}
+  .brandcopy span{font-size:9px}
+  .brandcopy small{display:none}
+  .bolt{font-size:32px}
+  .mobile-emergency-header{min-height:42px!important;padding:0 9px!important;font-size:8px!important;border-radius:13px!important}
+  .mobile-emergency-header span{font-size:10px!important}
+  .menu-btn{width:44px!important;height:42px!important}
+}
+
 </style>
 </head>
 <body>
