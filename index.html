@@ -853,6 +853,61 @@ body{background:var(--paper)}
  .about-premium-section{padding-block:68px}
 }
 
+
+/* Final polish: a deliberate emergency band and refined editorial details. */
+.nav-emergency,.nav-emergency-between,.mobile-emergency-header,.mobile-emergency-link{
+ background:#e52430!important;
+ border-color:rgba(255,255,255,.32)!important;
+ color:#fff!important;
+ box-shadow:0 7px 19px rgba(215,24,37,.30)!important;
+}
+.nav-emergency:hover,.nav-emergency-between:hover,.mobile-emergency-header:hover,.mobile-emergency-link:hover{background:#c91524!important;box-shadow:0 9px 24px rgba(215,24,37,.37)!important}
+.nav-emergency span,.nav-emergency-between span,.mobile-emergency-header span,.mobile-emergency-link>span{color:#fff!important}
+.emergency-strip{background:linear-gradient(110deg,#cf1725 0%,#ed2934 52%,#d61727 100%)!important;position:relative;isolation:isolate}
+.emergency-strip:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 42%,rgba(255,255,255,.09) 42.1%,transparent 62%),radial-gradient(circle at 88% 10%,rgba(255,255,255,.13),transparent 30%);z-index:-1}
+.emergency-strip .shell.emergency-inner{
+ display:grid!important;grid-template-columns:76px minmax(0,1fr) auto!important;
+ align-items:center!important;justify-content:initial!important;gap:28px!important;
+ min-height:178px!important;padding:28px 0!important;text-align:left!important;
+}
+.emergency-strip .emergency-symbol{width:76px;height:76px;border-radius:20px;background:#fff!important;color:#df1f2b!important;font-size:37px;box-shadow:0 16px 30px rgba(101,5,13,.18)}
+.emergency-copy{min-width:0}
+.emergency-kicker{color:#fff!important;opacity:.88;font-size:9px;letter-spacing:.18em}
+.emergency-copy h3{color:#fff!important;font-size:clamp(29px,3vw,39px)!important;line-height:1.06;margin:5px 0 7px!important}
+.emergency-copy p:last-child{color:#fff!important;font-size:12px!important;opacity:.92}
+.emergency-actions{gap:10px}
+.emergency-actions .btn{min-height:52px;text-decoration:none!important;border-radius:13px;white-space:nowrap}
+.emergency-actions .primary{background:#fff!important;color:#bd1723!important;font-size:12px!important;box-shadow:0 10px 25px rgba(99,5,14,.16)!important}
+.emergency-actions .primary:hover{background:#fff4f2!important}
+.emergency-outline{border:1px solid rgba(255,255,255,.75)!important;background:rgba(255,255,255,.09)!important;color:#fff!important}
+.quote-pill.emergency-pill.active{background:#e52430;color:#fff}
+.services .section-head,.projects .section-head{padding-bottom:24px;border-bottom:1px solid rgba(98,114,111,.25)}
+.projects .section-head{border-color:rgba(255,255,255,.19)}
+.services .section-head h2,.about-premium-copy h2,.projects .section-head h2,.area-copy h2{font-weight:780;letter-spacing:-.056em}
+.service{box-shadow:0 18px 45px rgba(21,47,53,.09),0 1px 0 rgba(255,255,255,.72) inset}
+.service-body:before{content:"";position:absolute;left:22px;top:0;width:48px;height:3px;background:#bd9c6a}
+.process-card{box-shadow:0 24px 46px rgba(9,26,32,.22)}
+.process-card h3{font-size:clamp(24px,2.2vw,29px);max-width:300px}
+.process-num{width:48px;height:48px;border-radius:14px}
+.about-feature-card{border-left:3px solid #c9b28e}
+.area-map-card{border-radius:28px;overflow:hidden}
+.footer-cta{background:linear-gradient(110deg,#2d4b56,#1e363f)}
+@media(max-width:900px){
+ .emergency-strip .shell.emergency-inner{grid-template-columns:64px minmax(0,1fr)!important;min-height:0!important;gap:15px!important;padding:30px 0!important}
+ .emergency-strip .emergency-symbol{width:64px;height:64px;font-size:30px}
+ .emergency-actions{grid-column:1/-1;justify-content:flex-start}
+}
+@media(max-width:600px){
+ .emergency-strip .shell.emergency-inner{grid-template-columns:48px minmax(0,1fr)!important;gap:13px!important;padding:27px 0!important}
+ .emergency-strip .emergency-symbol{width:48px;height:48px;border-radius:14px;font-size:25px}
+ .emergency-copy h3{font-size:25px!important}
+ .emergency-copy p:last-child{font-size:11px!important}
+ .emergency-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+ .emergency-actions .btn{min-height:48px;white-space:normal;font-size:10px!important;line-height:1.2;padding:8px!important;text-align:center}
+ .service-body:before{left:13px;width:35px}
+ .services .section-head,.projects .section-head{padding-bottom:19px}
+}
+
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
