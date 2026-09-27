@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#06131b">
-<title>Dernancourt Electrical — V9 HD Responsive</title>
+<title>Dernancourt Electrical — V10 Fluid Responsive</title>
 <meta name="description" content="Dernancourt Electrical — residential electrical work across North East Adelaide. Lighting, TV & data, switchboards, sheds, pergolas, power points and general electrical work.">
 <style>
 :root{--navy:#06131b;--navy2:#0b2431;--navy3:#113344;--yellow:#ffd43b;--yellow2:#f4bd1d;--white:#fff;--paper:#f4f6f6;--ink:#081722;--muted:#798994;--line:#dbe3e6;--shell:min(1200px,calc(100% - 48px));--header:82px;--radius:22px;--shadow:0 24px 65px rgba(0,20,30,.15)}
@@ -148,6 +148,159 @@ body.menu-open{overflow:hidden}
   .mobile-nav .menu-btn{width:48px;flex:0 0 48px}
   .service-photo{aspect-ratio:1.25/1}
   .service-photo img{object-position:center center}
+}
+
+
+/* V10 — fluid responsive sizing across desktop, laptop, tablet and phone */
+:root{
+  --shell:min(1280px,calc(100% - clamp(32px,5vw,72px)));
+}
+.hero,
+.hero-inner{
+  min-height:clamp(640px,calc(100svh - var(--header)),820px);
+}
+.hero-copy{max-width:clamp(560px,52vw,700px)}
+.hero h1{font-size:clamp(52px,5.7vw,92px)}
+.hero-lead{font-size:clamp(15px,1.25vw,18px)}
+.hero-chip{
+  right:max(3vw,calc((100vw - 1280px)/2 + 18px));
+  width:clamp(220px,19vw,270px);
+}
+.trust-item{padding:clamp(19px,2vw,27px) clamp(14px,1.7vw,23px)}
+.services,.about,.projects,.reviews,.area{padding-block:clamp(68px,7vw,96px)}
+.service-grid{gap:clamp(10px,1.15vw,16px)}
+.service-body{padding:clamp(15px,1.6vw,20px);min-height:clamp(145px,12vw,165px)}
+.service h3{font-size:clamp(17px,1.45vw,20px)}
+.about-grid{gap:clamp(36px,5vw,70px)}
+.about-photo{
+  height:auto;
+  aspect-ratio:1/1.03;
+  min-height:460px;
+  max-height:620px;
+}
+.process-grid{gap:clamp(10px,1.15vw,16px)}
+.process-card{padding:clamp(24px,2.2vw,31px);min-height:clamp(230px,19vw,270px)}
+.review{
+  width:clamp(320px,30vw,400px);
+  flex-basis:clamp(320px,30vw,400px);
+  min-height:clamp(220px,18vw,250px);
+}
+.area-grid{gap:clamp(34px,5vw,64px)}
+.area-photo{height:clamp(350px,35vw,465px)}
+.footer-grid{gap:clamp(20px,3vw,40px)}
+
+@media (min-width:1400px){
+  .section-head p{max-width:450px}
+  .hero-chip{bottom:9%}
+}
+
+@media (min-width:901px) and (max-width:1120px){
+  :root{--shell:calc(100% - 48px)}
+  .nav{gap:20px}
+  .desktop-nav{gap:15px}
+  .desktop-nav a{font-size:11px}
+  .brandcopy b{font-size:14px}
+  .brandcopy span{font-size:11px}
+  .hero h1{font-size:clamp(58px,7vw,78px)}
+  .hero-chip{width:220px;right:24px}
+  .service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .about-photo{min-height:480px}
+  .process-card h3{font-size:22px}
+}
+
+@media (max-width:900px){
+  :root{--shell:calc(100% - clamp(32px,6vw,52px))}
+  .hero,.hero-inner{min-height:clamp(620px,calc(100svh - var(--header)),760px)}
+  .hero-copy{max-width:min(650px,92%)}
+  .hero h1{font-size:clamp(50px,9vw,72px)}
+  .hero-lead{max-width:600px}
+  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .service-body{min-height:145px}
+  .about-photo{
+    width:min(760px,100%);
+    height:clamp(440px,66vw,560px);
+    min-height:0;
+    max-height:none;
+    aspect-ratio:auto;
+    margin-inline:auto;
+  }
+  .process-card{min-height:0}
+  .area-photo{height:clamp(320px,55vw,440px)}
+  .footer-grid{gap:24px}
+}
+
+@media (max-width:700px){
+  .section-head{gap:24px}
+  .section-head h2,.about-copy h2,.projects h2,.reviews h2,.area-copy h2{
+    font-size:clamp(36px,8.5vw,48px);
+  }
+  .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+  .stat{padding-inline:clamp(10px,3vw,16px)}
+  .stat b{font-size:clamp(24px,6vw,29px)}
+  .trust-item{min-width:0}
+}
+
+@media (max-width:600px){
+  :root{--shell:calc(100% - clamp(26px,7vw,34px))}
+  .hero,.hero-inner{
+    min-height:clamp(630px,calc(100svh - var(--header)),760px);
+  }
+  .hero-inner{padding:clamp(34px,8vh,54px) 0 clamp(42px,8vh,58px)}
+  .hero-copy{max-width:100%}
+  .hero h1{font-size:clamp(44px,13vw,56px)}
+  .hero-lead{font-size:clamp(13px,3.7vw,15px)}
+  .actions{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}
+  .btn{min-width:0;white-space:normal;text-align:center}
+  .service-grid{gap:10px}
+  .service-body{min-height:clamp(132px,38vw,148px)}
+  .service h3{font-size:clamp(14px,4vw,16px)}
+  .service p{font-size:clamp(8.5px,2.5vw,10px)}
+  .about-photo{height:clamp(360px,105vw,465px)}
+  .years strong{font-size:clamp(36px,11vw,44px)}
+  .review{
+    width:min(84vw,350px);
+    flex-basis:min(84vw,350px);
+  }
+  .area-photo{height:clamp(280px,74vw,360px)}
+  .area-form input,.area-form .btn{width:100%}
+}
+
+@media (max-width:420px){
+  :root{--shell:calc(100% - 24px)}
+  .brandcopy small{display:none}
+  .hero h1{font-size:clamp(42px,12.6vw,50px)}
+  .hero-stats{gap:0}
+  .stat span{font-size:8px}
+  .service-grid{grid-template-columns:1fr}
+  .service-photo{aspect-ratio:1.55/1}
+  .service-body{min-height:0;padding:16px}
+  .service h3{font-size:18px}
+  .service p{font-size:10.5px}
+  .arrow{position:absolute;right:16px;bottom:16px;margin-top:0}
+  .trust-grid{grid-template-columns:1fr}
+  .trust-item{border-right:0;border-bottom:1px solid var(--line)!important}
+  .trust-item:last-child{border-bottom:0!important}
+  .about-photo{height:clamp(340px,112vw,430px)}
+  .footer-links{flex-wrap:wrap}
+}
+
+@media (max-height:680px) and (min-width:601px){
+  .hero,.hero-inner{min-height:560px}
+  .hero-inner{padding-block:42px}
+  .hero h1{font-size:clamp(46px,6.5vw,66px)}
+  .hero-lead{margin:18px 0 22px;font-size:14px}
+  .hero-stats{margin-top:24px}
+  .hero-chip{bottom:7%}
+}
+
+@media (orientation:landscape) and (max-height:500px) and (max-width:950px){
+  .hero,.hero-inner{min-height:520px}
+  .hero-inner{align-items:center;padding-block:28px}
+  .hero h1{font-size:42px}
+  .hero-lead{font-size:13px;line-height:1.45;margin:14px 0 18px}
+  .hero-stats{margin-top:18px}
+  .stat b{font-size:22px}
+  .stat span{font-size:8px}
 }
 
 </style>
